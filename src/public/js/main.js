@@ -40,8 +40,8 @@ $(function () {
         $messageBox.val('')
     })
 
-    socket.on('new message', function (data) {
-        $chat.append('<b>' + data.nick + '</b>: ' + data.msg + '<br/>')
+    socket.on('new message', data => {
+        $chat.append(`<p><b>${data.nick}</b>: ${data.msg}</p>`)
     })
 
     socket.on('usernames', data => {
@@ -55,4 +55,14 @@ $(function () {
     socket.on('whisper', data => {
         $chat.append(`<p class="whisper"><b>${data.nick}:</b> ${data.msg}</p>`)
     })
+
+    socket.on('load old msgs', msgs => {
+        for (let i = 0; i < msgs.length; i++) {
+            displayMsg(msgs[i])
+        }
+    })
+
+    function displayMsg(data) {
+        $chat.append(`<p class="whisper"><b>${data.nick}:</b> ${data.msg}</p>`)
+    }
 })
