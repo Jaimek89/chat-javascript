@@ -12,7 +12,7 @@ const server = http.createServer(app)
 const io = socketio.listen(server)
 
 // db connection
-mongoose.connect('mongodb://jaimek:jaimek123@ds237735.mlab.com:37735/chat-javascript-jaimek89', {
+mongoose.connect('mongodb://localhost/chat', {
     useNewUrlParser: true
 })
     .then(db => console.log('db is connected'))
