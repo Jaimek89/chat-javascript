@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chat Javascript Fullstack</title>
-    <!-- BOOTSTRAP 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Chat Javascript Fullstack</title>
+        <!-- BOOTSTRAP 4 -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
 
-    <nav class="navbar navbar-light bg-warning">
-        <a class="navbar-brand mx-auto" href="/">Javascript Fullstack Chat</a>
-    </nav>
+        <nav class="navbar navbar-light bg-warning">
+            <a class="navbar-brand mx-auto" href="/">Javascript Fullstack Chat</a>
+        </nav>
 
-    <div class="container">
-        <div class="col-md-6 mt-4">
-            <div class="card">
-                <div class="card-header">
-                    <h4>Let's Chat</h4>
-                </div>
-
-                <div id="chat" class="card-body"></div>
-                <form id="message-form" class="card-footer">
-                    <div class="input-group">
-                        <input type="text" id="message" class="form-control">
-                        <div class="input-group-append">
-                            <input type="submit" class="btn btn-warning">
-                        </div>
+        <div class="container">
+            <div class="col-md-6 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Let's Chat</h6>
                     </div>
-                </form>
 
+                    <div id="chat" class="card-body"></div>
+                    <form id="message-form" class="card-footer">
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control">
+                            <div class="input-group-append">
+                                <input type="submit" class="btn btn-warning">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
             </div>
         </div>
-    </div>
-    
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        
+        <!-- SCRIPTS -->
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
 </html>
